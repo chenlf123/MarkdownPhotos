@@ -156,7 +156,7 @@ AliOS-Things可以通过命令行和AliOS-Things IDE开发，详见下面说明�
 
 1、获取CskyDebugServer（若已安装CDS/CDK，则可略过1和2的步骤）
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;链接：https://pan.baidu.com/s/1aXN3wIysVVthEN4QaPvRww 密码：ecs9
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;链接：https://pan.baidu.com/s/1lT7gIoJZylQEOUvXnrpFUg 密码：6bu9
 
 2、安装
 
