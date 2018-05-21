@@ -26,15 +26,15 @@ WiFi子板介绍：略
 
 ### 1.2 开发板连接方法
 
-1、WiFi子板连接
+#### 1.2.1 WiFi子板连接
 
 ![CB2201_ESP8266_evb](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/CB2201_ESP8266_evb.png)
 
-2、串口线连接
+#### 1.2.2 串口线连接
 
 ![USB_Serial](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/USB_Serial.png)
 
-3、电源连接
+#### 1.2.3 电源连接
 
 通过USB线供电，图略
 
@@ -86,25 +86,29 @@ AliOS-Things支持开发方式：命令行和AliOS-Things IDE，详见下面说�
 
 1、命令行环境搭建：
 
-参考https://github.com/alibaba/AliOS-Things/wiki/Quick-Start
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参考https://github.com/alibaba/AliOS-Things/wiki/Quick-Start
 
 2、命令行编译方式如下：
 
-`$ aos make mqttapp@cb2201`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$ aos make mqttapp@cb2201`
 
-build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件和hex文件。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件和hex文件。
 
 ### 3.2 AliOS-Things IDE编译
 
 1、AliOS-Things IDE环境搭建：
 
-  参考https://github.com/alibaba/AliOS-Things/wiki/Starter-Kit-Tutorial
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参考https://github.com/alibaba/AliOS-Things/wiki/Starter-Kit-Tutorial
 
-2、开发环境搭建好后，导入Alios-Things源码
+2、开发环境搭建好后，导入Alios-Things源码。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;导入方法1：鼠标直接拖入；
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;导入方法2：点击菜单栏 “文件(F)” -> “打开文件夹(F)”。
+
 3、Build如下图，选中mqttapp@cb2201，点击右侧&quot;√&quot;
 
-
-build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 ## 4 固件烧录
 
@@ -126,7 +130,7 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 ### 5.1 WiFi配网
 
-烧录完成后，点击复位键启动串口打印如下图所示：
+烧录完成后，点击复位键启动，串口打印如下图所示：
 
 在串口命令行中敲入如下配网命令：
 
@@ -150,11 +154,11 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 1、获取CskyDebugServer（若已安装CDS/CDK，则可略过1和2的步骤）
 
-链接：https://pan.baidu.com/s/1aXN3wIysVVthEN4QaPvRww 密码：ecs9
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;链接：https://pan.baidu.com/s/1aXN3wIysVVthEN4QaPvRww 密码：ecs9
 
 2、安装
 
-  解压后双击默认安装。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;解压后双击默认安装。
 
 3、端口设置，如下图：
 
@@ -162,7 +166,7 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 4、连接开发板
 
-点击 “红色三角形” 按钮，连接成功后，“红色三角形” 按钮会变成 “红色圆形” 按钮，如下图：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点击 “红色三角形” 按钮，连接成功后，“红色三角形” 按钮会变成 “红色圆形” 按钮，如下图：
 
 ![CskyDebugServer_connect](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/CskyDebugServer_connect.png)
 
