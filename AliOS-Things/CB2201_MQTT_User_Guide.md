@@ -4,9 +4,9 @@
 
 ## **1 硬件环境搭建**
 
-**1.1 开发板准备**
+### 1.1 开发板准备
 
-1、CB2201 YMC2HQFNR1A（赤焰剑）开发板介绍
+#### 1.1.1 CB2201 YMC2HQFNR1A（赤焰剑）开发板介绍
 
 **①** 赤焰剑开发板是杭州中天微全自主设计一款用于开发IoT 应用的开发板。板上集成中天微设计的基于中天微CK802 CPU核的CH2201芯片；集成了CPU调试器CKLink，只需要一根USB线就可以供电、调试、下载等操作。
 
@@ -18,11 +18,13 @@
 
 ![CB2201](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/CB2201.png)
 
-2、ESP8266 WiFi子板一块
+#### 1.1.2 ESP8266 WiFi子板
+
+WiFi子板介绍：略
 
 ![ESP8266_evb](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/ESP8266_evb.png)
 
-**1.2 开发板连接方法**
+### 1.2 开发板连接方法
 
 1、WiFi子板连接
 
@@ -36,9 +38,9 @@
 
 通过USB线供电，图略
 
-## **2 云端和通道环境搭建**
+## 2 云端和通道环境搭建
 
-**2.1 在云端主要包括以下几步**
+### 2.1 在云端主要包括以下几步
 
 参考链接（https://github.com/alibaba/AliOS-Things/wiki/Manual-Channel-MQTT），做如下操作：
 
@@ -52,7 +54,7 @@
 
 注意：请无视该文档中关于linuxhost的示例，编译方式请参考下面章节。
 
-**2.2 三要素设置**
+### 2.2 三要素设置
 
 修改./framework/protocol/linkkit/iotkit/sdk-encap/imports/iot\_import\_product.h 三个参数宏定义，修改为上一步骤中创建产品和设备时拿到的3个参数。
 
@@ -76,11 +78,11 @@
 
 此时在云端获取的三个参数ProductKey，DeviceName和DeviceSecret分别对应代码中的PRODUCT\_KEY，DEVICE\_NAME和DEVICE\_SECRET三个宏。
 
-## **3 mqttapp编译**
+## 3 mqttapp编译
 
 AliOS-Things支持开发方式：命令行和AliOS-Things IDE，详见下面说明。
 
-**3.1 命令行编译**
+### 3.1 命令行编译
 
 1、命令行环境搭建：
 
@@ -92,7 +94,7 @@ AliOS-Things支持开发方式：命令行和AliOS-Things IDE，详见下面说�
 
 build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件和hex文件。
 
-**3.2 AliOS-Things IDE编译**
+### 3.2 AliOS-Things IDE编译
 
 1、AliOS-Things IDE环境搭建：
 
@@ -104,21 +106,21 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件和
 
 build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
-## **4 固件烧录**
+## 4 固件烧录
 
-**4.1 安装烧录软件**
+### 4.1 安装烧录软件
 
 1、烧录软件获取：链接：https://pan.baidu.com/s/1fWUThsODomSQIj99Ja1Bag 密码：wkbb
 
 2、解压后，双击CSKYFlashProgrammer.exe
 
-**4.2 烧录**
+### 4.2 烧录
 
 参考下面两张图片配置好，点击下方"Start Program"按钮烧写
 
-## **5 WiFi配网及数据连接阿里云**
+## 5 WiFi配网及数据连接阿里云
 
-**5.1 WiFi配网**
+### 5.1 WiFi配网
 
 烧录完成后，点击复位键启动串口打印如下图所示：
 
@@ -132,15 +134,15 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 ![mqttapp_log](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/mqttapp_log.png)
 
-**5.2 查看设备是否在线**
+### 5.2 查看设备是否在线
 
 点击下面链接，登录阿里云账户查看：
 
 [http://iot.console.aliyun.com/#/product/newlist/region/cn-shanghai](http://iot.console.aliyun.com/#/product/newlist/region/cn-shanghai)
 
-## **6 调试**
+## 6 调试
 
-**6.1 CskyDebugServer安装和使用**
+### 6.1 CskyDebugServer安装和使用
 
 1、获取CskyDebugServer（若已安装CDS/CDK，则可略过1和2的步骤）
 
@@ -160,13 +162,13 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 ![CskyDebugServer_connect](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/CskyDebugServer_connect.png)
 
-**6.2 VS Code调试设置**
+### 6.2 VS Code调试设置
 
 根据已编译并烧录的app@board信息，更新 AliOS-Things/.vscode/launch.json 调试配置文件，比如：已编译并烧录 mqttapp@cb2201以后，更改相关配置：
 
 ![VSCode_launch](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_launch.png)
 
-**6.3 开始调试**
+### 6.3 开始调试
 
 1、点击 ![VSCode_Debug_Page_Button](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_Debug_Page_Button.png) 按钮，进入调试界面
 
