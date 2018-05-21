@@ -58,21 +58,23 @@
 
 ```
 
-***#elif  MQTT\_TEST***
+#elif  MQTT\_TEST
 
-***#define PRODUCT\_KEY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;......&quot;***
+#define PRODUCT\_KEY    "......"
 
-***#define DEVICE\_NAME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;......&quot;***
+#define DEVICE\_NAME    "......"
 
-***#define DEVICE\_SECRET &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;......&quot;***
+#define DEVICE\_SECRET  "......"
 
-***#define PRODUCT\_SECRET &nbsp;&nbsp; &quot;&quot;***
+#define PRODUCT\_SECRET ""
 
-***#else***
+#else
 
 ```
 
-注：mqttapp程序所在源码为AliOS-Things/example/mqttapp/mqtt-example.c (https://github.com/alibaba/AliOS-Things/blob/master/example/mqttapp/mqtt-example.c)。此时在云端获取的三个参数ProductKey，DeviceName和DeviceSecret分别对应代码中的PRODUCT\_KEY，DEVICE\_NAME和DEVICE\_SECRET三个宏。
+注：mqttapp程序所在源码为AliOS-Things/example/mqttapp/mqtt-example.c (https://github.com/alibaba/AliOS-Things/blob/master/example/mqttapp/mqtt-example.c)。
+
+此时在云端获取的三个参数ProductKey，DeviceName和DeviceSecret分别对应代码中的PRODUCT\_KEY，DEVICE\_NAME和DEVICE\_SECRET三个宏。
 
 ## **3 mqttapp编译**
 
@@ -86,13 +88,7 @@ AliOS-Things支持开发方式：命令行和AliOS-Things IDE，详见下面说�
 
 2、命令行编译方式如下：
 
-```
-
-$ aos make clean
-
-$ aos make mqttapp@hobbit1\_evb
-
-```
+`$ aos make mqttapp@hobbit1\_evb`
 
 build完成后可在out/mqttapp@hobbit1\_evb/binary/ 目录找到生成的bin文件和hex文件。
 
