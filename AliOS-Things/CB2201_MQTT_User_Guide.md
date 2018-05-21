@@ -56,19 +56,19 @@ WiFi子板介绍：略
 
 ### 2.2 三要素设置
 
-修改./framework/protocol/linkkit/iotkit/sdk-encap/imports/iot\_import\_product.h 三个宏定义，修改为上一步骤中创建产品和设备时拿到的三要素（ProductKey、DeviceName和DeviceSecret），如下：
+修改./framework/protocol/linkkit/iotkit/sdk-encap/imports/iot\_import\_product.h 中三个宏定义，修改为上一步骤中创建产品和设备时拿到的三要素（ProductKey、DeviceName和DeviceSecret），如下：
 
 ```
 
-#elif  MQTT\_TEST
+#elif  MQTT_TEST
 
-#define PRODUCT\_KEY    "......"
+#define PRODUCT_KEY    "......"
 
-#define DEVICE\_NAME    "......"
+#define DEVICE_NAME    "......"
 
-#define DEVICE\_SECRET  "......"
+#define DEVICE_SECRET  "......"
 
-#define PRODUCT\_SECRET ""
+#define PRODUCT_SECRET ""
 
 #else
 
@@ -76,11 +76,11 @@ WiFi子板介绍：略
 
 注：mqttapp程序所在源码为AliOS-Things/example/mqttapp/mqtt-example.c (https://github.com/alibaba/AliOS-Things/blob/master/example/mqttapp/mqtt-example.c)。
 
-此时在云端获取的三个参数ProductKey，DeviceName和DeviceSecret分别对应代码中的PRODUCT\_KEY，DEVICE\_NAME和DEVICE\_SECRET三个宏。
+此时在云端获取的三个参数ProductKey，DeviceName和DeviceSecret分别对应代码中的PRODUCT\_KEY，DEVICE\_NAME和DEVICE\_SECRET三个宏，宏PRODUCT_SECRET无需理会。
 
 ## 3 mqttapp编译
 
-AliOS-Things支持开发方式：命令行和AliOS-Things IDE，详见下面说明。
+AliOS-Things可以通过命令行和AliOS-Things IDE开发，详见下面说明。
 
 ### 3.1 命令行编译
 
@@ -120,9 +120,9 @@ AliOS-Things支持开发方式：命令行和AliOS-Things IDE，详见下面说�
 
 ### 4.2 烧录
 
-1、选择User Config： AliOS-Things-CB2201-MQTTAPP，更改AliOS-Things存放路径（即修改下图中“G:\”）
+1、选择User Config： AliOS-Things-CB2201-MQTTAPP，并更改AliOS-Things存放路径（即修改下图中“G:\”）
 
-2、点击下方 "Start Program" 按钮烧写（注意：烧写时需要先退出CskyDebugServer）
+2、点击下方 "Start Program" 按钮烧写（注意：烧写前需要先退出CskyDebugServer）
 
 ![FLASH_PROGRAMMER_Config](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/FLASH_PROGRAMMER_Config.png)
 
@@ -130,7 +130,7 @@ AliOS-Things支持开发方式：命令行和AliOS-Things IDE，详见下面说�
 
 ### 5.1 WiFi配网
 
-烧录完成后，点击复位键启动，串口打印如下图所示：
+烧录完成后，点击开发板复位键重启，串口打印如下图所示：
 
 在串口命令行中敲入如下配网命令：
 
@@ -138,7 +138,7 @@ AliOS-Things支持开发方式：命令行和AliOS-Things IDE，详见下面说�
 
 ![PeiWang](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/PeiWang.png)
 
-正常联网后，mqttapp会真正开始运行。下图为mqttapp运行日志截图：
+正常联网后，mqttapp会真正开始运行。下图为mqttapp运行日志：
 
 ![mqttapp_log](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/mqttapp_log.png)
 
