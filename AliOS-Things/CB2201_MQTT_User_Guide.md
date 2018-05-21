@@ -1,6 +1,6 @@
 # 手把手教你在CB2201开发板上使用mqtt通道上云
 
-本文基于 [AliOS Things](https://github.com/alibaba/AliOS-Things) 1.3.x版本，手把手教你如何在Hobbit1\_2上使用mqtt上云
+本文基于 [AliOS Things](https://github.com/alibaba/AliOS-Things) 1.3.x版本，手把手教你如何在CB2201上使用mqtt上云
 
 ## **1 硬件环境搭建**
 
@@ -16,7 +16,7 @@
 
 **④** 集成两个外设接口，每个外设接口中都集成了UART/SPI/IIC/ADC/PWM/GPIO等接口，可以连接各类接口兼容的功能子板，包括中天微设计的ENC28J60 SPI有线网卡子板，ESP8266-WiFi子板，传感器子板等。
 
-![Hobbit1_2_evb](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/Hobbit1_2_evb.png)
+![CB2201](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/CB2201.png)
 
 2、ESP8266 WiFi子板一块
 
@@ -26,7 +26,7 @@
 
 1、WiFi子板连接
 
-![Hobbit1_evb_ESP8266_evb](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/Hobbit1_evb_ESP8266_evb.png)
+![CB2201_ESP8266_evb](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/CB2201_ESP8266_evb.png)
 
 2、串口线连接
 
@@ -88,9 +88,9 @@ AliOS-Things支持开发方式：命令行和AliOS-Things IDE，详见下面说�
 
 2、命令行编译方式如下：
 
-`$ aos make mqttapp@hobbit1\_evb`
+`$ aos make mqttapp@cb2201`
 
-build完成后可在out/mqttapp@hobbit1\_evb/binary/ 目录找到生成的bin文件和hex文件。
+build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件和hex文件。
 
 **3.2 AliOS-Things IDE编译**
 
@@ -99,10 +99,10 @@ build完成后可在out/mqttapp@hobbit1\_evb/binary/ 目录找到生成的bin文
   参考https://github.com/alibaba/AliOS-Things/wiki/Starter-Kit-Tutorial
 
 2、开发环境搭建好后，导入Alios-Things源码
-3、Build如下图，选中mqttapp@hobbit1\_evb，点击右侧&quot;√&quot;
+3、Build如下图，选中mqttapp@cb2201，点击右侧&quot;√&quot;
 
 
-build完成后可在out/mqttapp@hobbit1\_evb/binary/ 目录找到生成的bin文件。
+build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 ## **4 固件烧录**
 
@@ -162,7 +162,7 @@ netmgr connect &lt;ssid&gt;  &lt;password&gt;
 
 **6.2 VS Code调试设置**
 
-根据已编译并烧录的app@board信息，更新 AliOS-Things/.vscode/launch.json 调试配置文件，比如：已编译并烧录 mqttapp@hobbit1\_2以后，更改相关配置：
+根据已编译并烧录的app@board信息，更新 AliOS-Things/.vscode/launch.json 调试配置文件，比如：已编译并烧录 mqttapp@cb2201以后，更改相关配置：
 
 ![VSCode_launch](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_launch.png)
 
