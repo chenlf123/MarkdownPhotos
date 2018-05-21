@@ -42,7 +42,7 @@ WiFi子板介绍：略
 
 ### 2.1 在云端主要包括以下几步
 
-参考链接（https://github.com/alibaba/AliOS-Things/wiki/Manual-Channel-MQTT），做如下操作：
+参考链接（ https://github.com/alibaba/AliOS-Things/wiki/Manual-Channel-MQTT ），做如下操作：
 
 1、创建阿里云账号
 
