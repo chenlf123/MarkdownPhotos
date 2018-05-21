@@ -56,7 +56,7 @@ WiFi子板介绍：略
 
 ### 2.2 三要素设置
 
-修改./framework/protocol/linkkit/iotkit/sdk-encap/imports/iot\_import\_product.h 三个参数宏定义，修改为上一步骤中创建产品和设备时拿到的3个参数。
+修改./framework/protocol/linkkit/iotkit/sdk-encap/imports/iot\_import\_product.h 三个宏定义，修改为上一步骤中创建产品和设备时拿到的三要素（ProductKey、DeviceName和DeviceSecret），如下：
 
 ```
 
@@ -112,11 +112,15 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 1、烧录软件获取：链接：https://pan.baidu.com/s/1fWUThsODomSQIj99Ja1Bag 密码：wkbb
 
-2、解压后，双击CSKYFlashProgrammer.exe
+2、解压后，双击CSKYFlashProgrammer.exe打开烧录软件
 
 ### 4.2 烧录
 
-参考下面两张图片配置好，点击下方"Start Program"按钮烧写
+1、选择User Config： AliOS-Things-CB2201-MQTTAPP，更改AliOS-Things存放路径（即修改下图中“G:\”）
+
+2、点击下方"Start Program"按钮烧写
+
+![FLASH_PROGRAMMER_Config](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/FLASH_PROGRAMMER_Config.png)
 
 ## 5 WiFi配网及数据连接阿里云
 
