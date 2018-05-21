@@ -182,5 +182,5 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 4、启动调试以后会自动转到已设置的断点 application\_start 函数处，同时上方会出现调试工具栏，提供常用的单步调试功能
 
-![VSCode_debug](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_debug.png)
+![VSCode_debug](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_Debug_Page.png)
 
