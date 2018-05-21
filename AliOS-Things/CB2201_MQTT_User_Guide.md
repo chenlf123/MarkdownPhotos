@@ -1,20 +1,20 @@
 # 手把手教你在CB2201开发板上使用MQTT通道上云
 
-本文基于 [AliOS Things](https://github.com/alibaba/AliOS-Things) 1.3.x版本，手把手教你如何在CB2201上使用mqtt上云
+本文基于 [AliOS Things](https://github.com/alibaba/AliOS-Things) 1.3.x版本，手把手教你在C-SKY CB2201开发板上使用MQTT通道上云
 
 ## **1 硬件环境搭建**
 
 ### 1.1 开发板准备
 
-#### 1.1.1 CB2201 YMC2HQFNR1A（赤焰剑）开发板介绍
+#### 1.1.1 CB2201开发板介绍
 
-**①** 赤焰剑开发板是杭州中天微全自主设计一款用于开发IoT 应用的开发板。板上集成中天微设计的基于中天微CK802 CPU核的CH2201芯片；集成了CPU调试器CKLink，只需要一根USB线就可以供电、调试、下载等操作。
+**①** CB2201开发板是杭州中天微自主设计的一款用于开发 IoT 应用的开发板。板上集成 CH2201 芯片，集成了 CPU 调试器CKLink，只需要一根 USB 线就可以进行供电、调试、下载等操作。
 
-**②** CH2201芯片内部集成C-SKY CK802 CPU核，集成AES,SHA,CRC,TRNG等安全相关模块。
+**②** CH2201芯片内部集成C-SKY CK802T CPU核，集成AES、SHA、CRC、TRNG等安全IP。
 
-**③** 超低功耗设计，低功耗模式下，CH2201芯片核心电流小于3uA，QFP-64-0.4mm封装。
+**③** 超低功耗设计，低功耗模式下，CH2201芯片核心电流小于3uA，使用QFP-64-0.4mm封装。
 
-**④** 集成两个外设接口，每个外设接口中都集成了UART/SPI/IIC/ADC/PWM/GPIO等接口，可以连接各类接口兼容的功能子板，包括中天微设计的ENC28J60 SPI有线网卡子板，ESP8266-WiFi子板，传感器子板等。
+**④** 集成两个子板接口，每个子板接口中都集成了UART/SPI/IIC/ADC/PWM/GPIO等外设，可以连接各类接口兼容的功能子板，包括中天微设计的ENC28J60 SPI有线网卡子板，ESP8266-WiFi子板，传感器子板等。
 
 ![CB2201](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/CB2201.png)
 
@@ -110,7 +110,7 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 ### 4.1 安装烧录软件
 
-1、烧录软件获取：链接：https://pan.baidu.com/s/1fWUThsODomSQIj99Ja1Bag 密码：wkbb
+1、烧录软件获取：链接：https://pan.baidu.com/s/1miW9D5cj1c43xJFzVHUMxQ 密码：pmpy
 
 2、解压后，双击CSKYFlashProgrammer.exe打开烧录软件
 
@@ -118,7 +118,7 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 1、选择User Config： AliOS-Things-CB2201-MQTTAPP，更改AliOS-Things存放路径（即修改下图中“G:\”）
 
-2、点击下方"Start Program"按钮烧写
+2、点击下方 "Start Program" 按钮烧写（注意：烧写时需要先退出CskyDebugServer）
 
 ![FLASH_PROGRAMMER_Config](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/FLASH_PROGRAMMER_Config.png)
 
@@ -154,7 +154,7 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 2、安装
 
-  解压后双击默认安装
+  解压后双击默认安装。
 
 3、端口设置，如下图：
 
@@ -168,17 +168,17 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 ### 6.2 VS Code调试设置
 
-根据已编译并烧录的app@board信息，更新 AliOS-Things/.vscode/launch.json 调试配置文件，比如：已编译并烧录 mqttapp@cb2201以后，更改相关配置：
+根据已编译并烧录的app@board信息，更新 AliOS-Things/.vscode/launch.json 调试配置文件，比如：已编译并烧录 mqttapp@cb2201以后，更改相关配置如下图：
 
 ![VSCode_launch](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_launch.png)
 
 ### 6.3 开始调试
 
-1、点击 ![VSCode_Debug_Page_Button](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_Debug_Page_Button.png) 按钮，进入调试界面
+1、点击 ![VSCode_Debug_Page_Button](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_Debug_Page_Button.png) 按钮，进入调试界面。
 
-2、选择并点击 “CSKY DEBUG @ Windows/Linux”：![VSCode_CSKYDebug_Button](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_CSKYDebug_Button.png)
+2、选择 “CSKY DEBUG @ Windows/Linux”：![VSCode_CSKYDebug_Button](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_CSKYDebug_Button.png)
 
-3、点击左上方的 ![VSCode_Continue](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_Continue.png) 按钮(或F5)启动调试
+3、点击左上方的 ![VSCode_Continue](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_Continue.png) 按钮(或F5)启动调试。
 
 4、启动调试以后会自动停到已设置的断点 application\_start 函数处；
 
