@@ -176,11 +176,15 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 1、点击 ![VSCode_Debug_Page_Button](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_Debug_Page_Button.png) 按钮，进入调试界面
 
-2、选择CSKY DEBUG：![VSCode_CSKYDebug_Button](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_CSKYDebug_Button.png)
+2、选择并点击 “CSKY DEBUG @ Windows/Linux”：![VSCode_CSKYDebug_Button](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_CSKYDebug_Button.png)
 
 3、点击左上方的 ![VSCode_Continue](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_Continue.png) 按钮(或F5)启动调试
 
-4、启动调试以后会自动转到已设置的断点 application\_start 函数处，同时上方会出现调试工具栏，提供常用的单步调试功能
+4、启动调试以后会自动停到已设置的断点 application\_start 函数处；
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同时上方会出现调试工具栏，提供常用的单步调试功能；
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;左侧边栏可以查看变量和函数调用栈。
 
 ![VSCode_debug](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/VSCode_Debug_Page.png)
 
