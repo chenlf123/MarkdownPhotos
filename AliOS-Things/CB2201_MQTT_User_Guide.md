@@ -148,6 +148,8 @@ AliOS-Things支持开发方式：命令行和AliOS-Things IDE，详见下面说�
 
 [http://iot.console.aliyun.com/#/product/newlist/region/cn-shanghai](http://iot.console.aliyun.com/#/product/newlist/region/cn-shanghai)
 
+![AliYun_Device_information](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/AliYun_Device_information.png)
+
 ## 6 调试
 
 ### 6.1 CskyDebugServer安装和使用
