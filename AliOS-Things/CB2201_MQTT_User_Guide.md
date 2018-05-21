@@ -1,4 +1,4 @@
-# 手把手教你在CB2201开发板上使用mqtt通道上云
+# 手把手教你在CB2201开发板上使用MQTT通道上云
 
 本文基于 [AliOS Things](https://github.com/alibaba/AliOS-Things) 1.3.x版本，手把手教你如何在CB2201上使用mqtt上云
 
@@ -124,7 +124,7 @@ build完成后可在out/mqttapp@cb2201/binary/ 目录找到生成的bin文件。
 
 在串口命令行中敲入如下配网命令：
 
-netmgr connect &lt;ssid&gt;  &lt;password&gt;
+`# netmgr connect <ssid> <password>`
 
 ![PeiWang](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/PeiWang.png)
 
@@ -156,7 +156,7 @@ netmgr connect &lt;ssid&gt;  &lt;password&gt;
 
 4、连接开发板
 
-点击“红色三角形”按钮，连接成功后，“红色三角形”按钮会变成“红色圆形”按钮，如下图：
+点击 “红色三角形” 按钮，连接成功后，“红色三角形” 按钮会变成 “红色圆形” 按钮，如下图：
 
 ![CskyDebugServer_connect](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/CskyDebugServer_connect.png)
 
