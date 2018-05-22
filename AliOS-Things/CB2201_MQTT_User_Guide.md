@@ -74,7 +74,7 @@ WiFi子板介绍：略
 
 ```
 
-注：mqttapp程序所在源码为AliOS-Things/example/mqttapp/mqtt-example.c (https://github.com/alibaba/AliOS-Things/blob/master/example/mqttapp/mqtt-example.c)。
+注：mqttapp程序所在源码为AliOS-Things/example/mqttapp/mqtt-example.c ( https://github.com/alibaba/AliOS-Things/blob/master/example/mqttapp/mqtt-example.c )。
 
 此时在云端获取的三个参数ProductKey，DeviceName和DeviceSecret分别对应代码中的PRODUCT\_KEY，DEVICE\_NAME和DEVICE\_SECRET三个宏，宏PRODUCT_SECRET无需理会。
 
@@ -122,9 +122,13 @@ AliOS-Things可以通过命令行和AliOS-Things IDE开发，详见下面说明�
 
 1、选择User Config： AliOS-Things-CB2201-MQTTAPP，并更改AliOS-Things存放路径（即修改下图中“G:\”）
 
-2、点击下方 "Start Program" 按钮烧写（注意：烧写前需要先退出CskyDebugServer）
-
 ![FLASH_PROGRAMMER_Config](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/FLASH_PROGRAMMER_Config.png)
+
+2、开发板首次烧录程序需要选择 “Chip Erase” 用以擦除eFlash，之后开发则选择 “Erase Sectors” 即可。
+
+![FLASH_PROGRAMMER_Advance_Chip_Erase](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/AliOS-Things/FLASH_PROGRAMMER_Advance_Chip_Erase.png)
+
+3、点击下方 "Start Program" 按钮烧写（注意：烧写前需要先退出CskyDebugServer）
 
 ## 5 WiFi配网及数据连接阿里云
 
