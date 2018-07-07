@@ -1,8 +1,8 @@
-#Arduino体验
+# Arduino体验
 
 本文介绍从零开始体验Arduino开发板
 
-#1.购买Arduino开发板
+# 1.购买Arduino开发板
 
 小编从淘宝七星虫旗舰店，618活动价172元（原价238元）购买了一整套开发板套件，内含各种实验用的电子器件，包含如下：
 
@@ -15,17 +15,15 @@
 
 淘宝链接：[https://detail.tmall.com/item.htm?id=35121893747&spm=a1z09.2.0.0.1bcb2e8dC5Sumu&_u=7at3rl743ec](https://detail.tmall.com/item.htm?id=35121893747&spm=a1z09.2.0.0.1bcb2e8dC5Sumu&_u=7at3rl743ec)
 
-#2.开发环境
+# 2.开发环境
 
-##2.2下载IDE
+## 2.2下载IDE
 
 从Arduino官网下载IDE arduino-1.8.5-windows.exe，共90.4MB大小，下载速度很快，下载时无需登录。
 
 链接：[https://www.arduino.cc/en/Main/Donate](https://www.arduino.cc/en/Main/Donate)
 
-##
-
-##2.3安装IDE
+## 2.3安装IDE
 
 安装文件只有1个EXE文件，无需解压，双击打开安装，非常方便。如下图：
 
@@ -33,7 +31,7 @@
 
 ![Arduino_IDE_Install_2](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_Install_2.png)
 
-###2.3.1初识IDE
+### 2.3.1初识IDE
 
 安装完后，会在桌面生成一个快捷方式，双击打开，如下图：
 
@@ -43,7 +41,7 @@
 
 ![Arduino_IDE_2](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_2.png)
 
-###2.3.2按钮介绍
+### 2.3.2按钮介绍
 
 “验证”按钮：编译验证程序。
 
@@ -65,7 +63,7 @@
 
 ![Arduino_IDE_Button_5](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_Button_5.png)
 
-##2.4编译
+## 2.4编译
 编译时间：简单工程大概是2秒钟时间
 
 编译输出信息：如下图。
@@ -76,14 +74,14 @@
 
 ![Arduino_IDE_Build_Error](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_Build_Error.png)
 
-##2.5下载程序
+## 2.5下载程序
 
 1. 先用USB线把开发板和电脑连接起来；
 2. 再打开IDE，打开后会自动连接上开发板，如下图；
 3. 点击“上传”按钮下载程序。
 ![Arduino_IDE_COM](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_COM.png)
 
-##2.6编写LED测试程序
+## 2.6编写LED测试程序
 
 按照《Arduino入门到实践》书中描述的digital接口，随便写了个跑马灯程序，还比较顺利，实景图：
 
@@ -94,9 +92,9 @@
 
 ![Arduino_IDE_Update](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_Update.png)
 
-#3总结
+# 3总结
 
-##3.1开发板
+## 3.1开发板
 
 优点：
 
@@ -110,7 +108,7 @@
 2. GPIO口相对较少
 3. 开发板的UART、SPI、IIC接口没有标志
 
-##3.2 开发方式
+## 3.2 开发方式
 
 优点：
 
