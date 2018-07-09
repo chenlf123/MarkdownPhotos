@@ -64,7 +64,9 @@
 
 ![Arduino_IDE_Button_5](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_Button_5.png)
 
-## 2.5 编译
+## 3 正式使用
+
+### 3.1 编译测试
 编译时间：简单工程大概是2秒钟时间
 
 编译输出信息：如下图，有简单粗的提示信息。
@@ -75,14 +77,14 @@
 
 ![Arduino_IDE_Build_Error](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_Build_Error.png)
 
-## 2.6 固化程序
+## 3.2 固化程序
 
 1. 先用USB线把开发板和电脑连接起来；
 2. 再打开IDE，打开后会自动连接上开发板，如下图；
 3. 点击“上传”按钮下载程序。
 ![Arduino_IDE_COM](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_COM.png)
 
-## 2.7 编写LED测试程序
+## 3.3 编写LED测试程序
 
 按照《Arduino入门到实践》书中描述的digital接口，写了个跑马灯程序，比较顺利，实景图：
 
@@ -93,9 +95,9 @@
 
 ![Arduino_IDE_Update](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_Update.png)
 
-# 3 总结
+# 4 体验感受
 
-## 3.1 开发板
+## 4.1 开发板
 
 优点：
 
@@ -111,7 +113,7 @@
 3. 开发板的UART、SPI、IIC等接口没有标志
 4. 暂时没找到芯片和开发板的总体资源介绍
 
-## 3.2 开发方式
+## 4.2 开发方式
 
 优点：
 
@@ -133,4 +135,6 @@
 2. 没看到深度开发的方法，看不到底层函数的实现
 3. 总体上说，仅适合面向应用开发的人员
 
-总的来说，买到的Arduino开发板是非常优秀的开发板，定位明确：适合教学、实验等小应用开发。相信Arduino还有更多针对专业领域的开发板，期待体验。
+### 4.3 体验总结
+
+总的来说，买到的Arduino开发板是非常优秀的开发板，使用简答，定位明确，适合教学、实验等小应用开发。相信Arduino还有更多针对专业领域的开发板，期待体验。
