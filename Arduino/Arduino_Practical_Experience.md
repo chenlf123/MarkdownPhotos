@@ -24,15 +24,17 @@
 
 ## 2.3 安装IDE
 
-安装文件只有1个EXE文件，无需解压，双击打开安装，非常方便。如下图加载界面：
+安装文件只有1个EXE文件，无需解压，双击打开安装，非常方便。如下图：
 
 ![Arduino_IDE_Install_1](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_Install_1.png)
 
 ![Arduino_IDE_Install_2](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_Install_2.png)
 
-### 2.3.1 初识IDE
+## 2.4 初识IDE
 
-安装完后，会在桌面生成一个快捷方式，双击打开，如下图：
+### 2.4.1 打开进入IDE
+
+安装完后，会在桌面生成一个快捷方式，双击打开，如下图加载界面：
 
 ![Arduino_IDE_1](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_1.png)
 
@@ -40,7 +42,7 @@
 
 ![Arduino_IDE_2](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_2.png)
 
-### 2.3.2 按钮介绍
+### 2.4.2 按钮介绍
 
 下图 “验证” 按钮：编译验证程序。
 
@@ -62,7 +64,7 @@
 
 ![Arduino_IDE_Button_5](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_Button_5.png)
 
-## 2.4 编译
+## 2.5 编译
 编译时间：简单工程大概是2秒钟时间
 
 编译输出信息：如下图，有简单粗的提示信息。
@@ -73,14 +75,14 @@
 
 ![Arduino_IDE_Build_Error](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_Build_Error.png)
 
-## 2.5 固化程序
+## 2.6 固化程序
 
 1. 先用USB线把开发板和电脑连接起来；
 2. 再打开IDE，打开后会自动连接上开发板，如下图；
 3. 点击“上传”按钮下载程序。
 ![Arduino_IDE_COM](https://raw.githubusercontent.com/chenlf123/MarkdownPhotos/master/Arduino/Arduino_IDE_COM.png)
 
-## 2.6 编写LED测试程序
+## 2.7 编写LED测试程序
 
 按照《Arduino入门到实践》书中描述的digital接口，写了个跑马灯程序，比较顺利，实景图：
 
