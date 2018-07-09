@@ -126,6 +126,7 @@
 7. IDE提供较多的Demo程序。
 8. 提供20多个库支持包括，括Robots、Ethernet、SD、SPI、Wi-Fi、键鼠、GSM等
 9. 驱动接口：进行了接口的封装，使得用起来简单
+   举例：Serial.begin(115200)、Keyboard.press(KEY_LEFT_ALT);
 10. 视频教程、书本信息齐全
 11. 总体上手非常快
 
